@@ -1,0 +1,57 @@
+/* Login Panel */ 
+#login-form{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form-user-name, #login-form-user-age {
+  border: 1px dashed black;
+  width: 100%;
+  max-width: 400px;
+}
+
+#login-form-submit, #login-form-user-age, #login-form-user-name {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+}
+
+/* Quiz Panel */
+
+#quiz-panel {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+#quiz-question > h2 {
+  border: 0.125rem solid black;
+  padding: 0.75rem;
+  background-color: #253031;
+  color: #f3f3f3;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.quiz-options{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.option-buttons{
+  cursor: pointer;
+  color: #ffffff;
+  border: 0.125rem solid #030303;
+  background-color: #26547c;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  width: 30%;
+  font-weight: lighter;
+  font-size: 1.3rem;
+}

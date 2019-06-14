@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>namdu1radio - online quiz</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/quiz.js"></script>
+    <script src="./js/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="login-form">
+      <input type="text" placeholder="Your Full Name" id="login-form-user-name"/><br/>
+      <input type="number" placeholder="Your Age" id="login-form-user-age"/>
+      <input type="submit" value="Join Quiz!" id="login-form-submit"/>
+    </div>
+
+    <div id="quiz-panel">
+      <div id="audio-player"></div>
+      <div id="questions-panel">
+        <div id="quiz-question">
+          <h2 id="quiz-question-text">Wait for question to load!</h2>
+        </div>
+        <div class="quiz-options">
+          <h4 id="option-a" class="option-buttons">Option a</h4>
+          <h4 id="option-b" class="option-buttons">Option b</h4>
+        </div>
+        <div class="quiz-options">
+            <h4 id="option-c" class="option-buttons">Option c</h4>
+            <h4 id="option-d" class="option-buttons">Option d</h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="connecting-message">
+      <h2 id="connecting-message-label">Connecting to Socket...</h2>
+    </div>
+  </body>
+</html>

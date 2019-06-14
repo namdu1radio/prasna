@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>namdu1radio - Admin</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/admin.js"></script>
+    <script src="./js/socket.io.js"></script>
+  </head>
+  <body>
+    <div id="login-form">
+      <input type="password" placeholder="Admin Password" id="login-form-admin-secret"/>
+      <input type="submit" value="Login" id="login-form-submit"/>
+    </div>
+
+    <div id="quiz-panel">
+      <div id="audio-player"></div>
+      <div id="questions-panel">
+        <div id="quiz-question">
+          <input type="text" placeholder="question text" id="quiz-question-text"/>
+        </div>
+        <div class="quiz-options">
+          <input id="option-a" type="text" placeholder="Option A"/>
+          <input id="option-b" type="text" placeholder="Option B" />
+        </div>
+        <div class="quiz-options">
+            <input id="option-c" type="text" placeholder="Option C"/>
+            <input id="option-d" type="text" placeholder="Option D"/>
+        </div>
+        <input type="submit" value="Send Question" id="quiz-panel-publishquestion"/>
+      </div>
+    </div>
+
+    <div id="connecting-message">
+      <h2 id="connecting-message-label">Connecting to Socket...</h2>
+    </div>
+  </body>
+</html>
