@@ -1,13 +1,13 @@
 <html>
   <head>
     <title>namdu1radio - online quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/quiz.js"></script>
     <script src="./js/socket.io.js"></script>
 
     <script src="./js/RTCMultiConnection.min.js"></script>
     <script src="./js/adapter.js"></script>
-    <script src="./js/getHTMLMediaElement.js"></script>
   </head>
   <body>
     <div id="login-form">
@@ -17,7 +17,8 @@
     </div>
 
     <div id="quiz-panel">
-      <div id="audio-container" style="display:none">
+      <div id="audio-container">
+        <audio/>
       </div>
       <div id="audio-message-area" style="display: flex; flex: 1; justify-content: center; align-items: center; flex-direction: column;">
           <h2 style="color: #ed2939;">Connecting to audio server...</h2>
