@@ -18,6 +18,7 @@ let connectedUsers = 0;
 // WebSocket server
 io.on('connection', function(socket){
   connectedUsers += 1;
+  io.emit("player-joined", {count: connectedUsers});
 
   socket.on('quizReply', processQuizReply);
   socket.on('newQuestion', (content) => sendNewQuestion(io, content));
@@ -25,7 +26,7 @@ io.on('connection', function(socket){
   socket.on('disconnect', () => {
     // close user connection
     connectedUsers -= 1;
-    
+    io.emit("player-left", {count: connectedUsers});
   });
 });
 

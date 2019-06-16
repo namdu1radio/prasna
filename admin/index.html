@@ -4,6 +4,10 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/admin.js"></script>
     <script src="./js/socket.io.js"></script>
+
+    <script src="./js/RTCMultiConnection.min.js"></script>
+    <script src="./js/adapter.js"></script>
+    <script src="./js/getHTMLMediaElement.js"></script>
   </head>
   <body>
     <div id="login-form">
@@ -13,6 +17,12 @@
 
     <div id="quiz-panel">
       <div id="audio-player"></div>
+      <div id="audio-message-area" style="display: flex; flex: 1; justify-content: center; align-items: center; flex-direction: column;">
+          <h2 style="color: #ed2939;">Connecting to audio server...</h2>
+      </div>
+      <div id="player-count">
+          <h3> <span id="player-count-value">0</span> players playing!</h3>
+      </div>
       <div id="questions-panel">
         <div id="quiz-question">
           <input type="text" placeholder="question text" id="quiz-question-text"/>
@@ -32,5 +42,7 @@
     <div id="connecting-message">
       <h2 id="connecting-message-label">Connecting to Socket...</h2>
     </div>
+
+    <script src="./js/audio-broadcast.js"></script>
   </body>
 </html>

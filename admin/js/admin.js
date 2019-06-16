@@ -1,4 +1,4 @@
-let adminSecret, loginForm, quizPanel, connectingMsg, socket;
+let adminSecret, loginForm, quizPanel, connectingMsg, socket, totalPlayers;
 let quizQuestion, quizOptionA, quizOptionB, quizOptionC, quizOptionD;
 let thisQuestionSent = false; // so that user cant press button again and again
 
@@ -6,6 +6,7 @@ window.onload = function(){
   loginForm = document.getElementById("login-form");
   quizPanel = document.getElementById("quiz-panel");
   connectingMsg = document.getElementById("connecting-message");
+  totalPlayers = document.getElementById("player-count-value");
 
   quizQuestion = document.getElementById("quiz-question-text");
   quizOptionA = document.getElementById("option-a");
@@ -44,6 +45,8 @@ function boot() {
   socket = io("http://127.0.0.1:1337/");
   socket.on('connect_error', whenSocketFails);
   socket.on('connect', startQuiz);
+  socket.on('player-joined', handlePlayerUpdate);
+  socket.on('player-left', handlePlayerUpdate);
 }
 
 function whenSocketFails() {
@@ -79,4 +82,8 @@ function handleQuizPublishClick(event) {
     quizOptionD.value = "";
     thisQuestionSent = false;
   }
+}
+
+function handlePlayerUpdate(message) {
+  totalPlayers.innerHTML = Number(message.count)-1;
 }
