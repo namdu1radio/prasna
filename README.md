@@ -1,5 +1,9 @@
 # Setup Guide
 
+## Dependency
+
+Conference signaling server from [Samvad](https://github.com/namdu1radio/samvad) project.
+
 ## Setting up client
 
 1. Move to a temporary directory by issuing `cd /tmp` in terminal.
@@ -41,4 +45,4 @@
 1. First launch the Quiz admin dashboard by visiting `http://xxx.xxx.xxx.xxx/quiz/admin` and entering default password `123`. After that allow mic permission.
 2. In client devices open Quiz client webpage by visiting `http://xxx.xxx.xxx.xxx/quiz` in any modern web-browser. Client can join the Quiz by entering their name and age and clicking Join button.
 
-Replae `xxx.xxx.xxx.xxx` with the IP of the machine where Nginx and quiz are setup. The accessing device, and the Nginx and Conference server should be all part of same network.
+Replae `xxx.xxx.xxx.xxx` with the IP of the machine where Nginx and quiz are setup. The accessing device, and the Nginx, the Conference server and the Quiz server - should be all part of same network.
