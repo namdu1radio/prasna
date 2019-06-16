@@ -55,3 +55,7 @@
   font-weight: lighter;
   font-size: 1.3rem;
 }
+
+#audio-container > * {
+  width: 100%;
+}

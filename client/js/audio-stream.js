@@ -34,9 +34,8 @@ connection.sdpConstraints.mandatory = {
 
 connection.audiosContainer = document.getElementById('audio-container');
 connection.onstream = function(event) {
-  var width = parseInt(connection.audiosContainer.clientWidth / 2) - 20;
+  /* var width = parseInt(connection.audiosContainer.clientWidth / 2) - 20;
   var mediaElement = getHTMLMediaElement(event.mediaElement, {
-      title: event.userid,
       buttons: ['full-screen'],
       width: width,
       showOnMouseEnter: false
@@ -48,7 +47,12 @@ connection.onstream = function(event) {
       mediaElement.media.play();
   }, 5000);
 
-  mediaElement.id = event.streamid;
+  mediaElement.id = event.streamid; */
+
+  var audio = event.mediaElement;
+
+  // append to <body>
+  connection.audiosContainer.appendChild(audio);
 };
 
 connection.onstreamended = function(event) {
